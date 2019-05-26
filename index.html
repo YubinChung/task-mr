@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MR | Coding Task</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="css/style.css" rel="stylesheet" media="all">
+    <script src="js/jquery-1.12.4.min.js"></script>
+  </head>
+  <body id="body" onload="init()">
+    <div class="wrapper">
+      <header>
+        <div class="inner_wrapper">
+          <nav class="header__right-nav ">
+            <button class="btn-mycart" id="btn-mycart">My Cart ( <span id="cart_item_count">4</span> )</button>
+              <ul id="mycart">
+                <li>
+                  <a href="javascript:void(0);" class="mycart__item">
+                    <img src="images/classic-tee.jpg" alt="Classic Tee image" />
+                    <h6>Classic Tee</h6>
+                    <p>
+                      <span class="quantity">1</span> 
+                      <span class="price_info">
+                        <span class="unit">$</span>
+                        <span class="price">75.00</span>
+                      </span></p>
+                    <p>Size: <span class="size">S</span></p>
+                  </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="mycart__item">
+                      <img src="images/classic-tee.jpg" alt="Classic Tee image" />
+                      <h6>Classic Tee</h6>
+                      <p>
+                        <span class="quantity">1</span> 
+                        <span class="price_info">
+                          <span class="unit">$</span>
+                          <span class="price">75.00</span>
+                        </span></p>
+                      <p>Size: <span class="size">S</span></p>
+                    </a>
+                  </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section>
+        <div class="inner_wrapper">
+          <article class="product__details">
+            <div class="image_wrap">
+              <img src="images/classic-tee.jpg" alt="Classic Tee image" />
+            </div>
+            <div class="contents_wrap">
+              <h3 id="item__title">Classic Tee</h3>
+              <p class="price_info">
+                <span class="unit">$</span><span class="price">75.00</span>
+              </p>
+              <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque pharetra dictum. Nunc in risus blandit, tempor sem quis, dictum est. Morbi ligula lorem, fringilla vitae nibh sed, faucibus facilisis massa. Mauris commodo suscipit molestie. Donec feugiat eu tellus rutrum interdum. Curabitur pellentesque mauris nec porta vehicula. Donec eu egestas neque. Nam ac aliquam diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus sagittis ut risus eget pulvinar. Pellentesque rhoncus laoreet sapien ut fringilla. Vestibulum nec magna ligula. Cras ut ullamcorper purus.</p>
+              <!-- variant -->
+              <div id="variant_wrap" class="variant_wrap">
+                <h6>Size 
+                  <span class="required">*</span>
+                  <span id="selected_variant"></span>
+                </h6>
+                <div class="varient__list">
+                  <button data-value="s">S</button>
+                  <button data-value="m">M</button>
+                  <button data-value="l">L</button>
+                </div>
+              </div>
+              <!-- // variant -->
+              <button id="add_to_cart">Add to cart</button>
+            </div>
+            
+          </article>
+        </div>
+      </section>
+    </div>
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+  </body>
+</html>

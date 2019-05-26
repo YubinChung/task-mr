@@ -1,0 +1,85 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+/*  */
+html,body{font-size:13px;color:#888;min-width:320px;}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-family: 'Open Sans', sans-serif;vertical-align:baseline;-webkit-font-smoothing: antialiased;box-sizing:border-box;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body,input,textarea,select,button{font-size:1rem;line-height:1.3rem;font:inherit;-webkit-font-smoothing: antialiased;}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+button {border: none;background-color: transparent;outline: none;cursor: pointer;}
+
+
+/* common */
+#body{min-width:320px;}
+.inner_wrapper {margin: 0 10%;position: relative;}
+h1,h2,h3,h4,h5,h6{color:#222!important}
+h1{font-size:2rem;line-height:2.3rem}
+h2{font-size:1.8rem;line-height:2.1rem}
+h3{font-size:1.6rem;line-height:1.9rem}
+h4{font-size:1.4rem;line-height:1.7rem}
+h5{font-size:1.2rem;line-height:1.5rem}
+h6{font-size:1.1rem;line-height:1.4rem}
+p{font-size:1rem;line-height:1.6rem}
+a{text-decoration:none;color:#222;}
+img{display:block;width:100%;max-width:100%}
+.required{color:#c90000}
+
+/* header */
+header{margin-top:10px;background-color:#f6f6f7;min-height:32px}
+nav.header__right-nav .btn-mycart{font-size:11px;color:#888;padding:8px;border-style:solid;border-width:1px;border-color:#f6f6f7 #f6f6f7 #fff #f6f6f7}
+nav.header__right-nav{position:absolute;right:0}
+
+
+/* mycart */
+#mycart{display:none;border:1px solid #ccc;width:300px;overflow-y:scroll;position:absolute;right:0;top:32px;background-color:#fff;max-height:315px}
+#mycart.active{display:block;z-index:1}
+#mycart .mycart__item{padding:20px;display:block;overflow:hidden}
+#mycart .mycart__item h6{font-size:13px;font-weight:normal}
+#mycart .mycart__item p{padding-top:5px}
+#mycart .mycart__item p .price_info:before{content:"x"}
+#mycart .mycart__item p .price{font-weight:bold}
+#mycart .mycart__item img{width:30%;float:left;margin-right:20px}
+
+nav.header__right-nav .btn-mycart.active,
+#body.pc nav.header__right-nav .btn-mycart:hover{background-color:#fff;border-color:#ccc #ccc #fff #ccc;z-index:4;color:#222}
+nav.header__right-nav .btn-mycart.active:before,
+#body.pc nav.header__right-nav .btn-mycart:before{content:"";display:block;height:1px;background-color:#fff;position:absolute;bottom:0;z-index:2;right:1px;left:1px}
+
+
+/* product__details */
+.product__details{padding:40px 0;display:flex;flex-flow:row wrap}
+.image_wrap{width:50%}
+.contents_wrap{width:50%;padding-left:30px}
+.contents_wrap h3{padding-bottom:20px;border-bottom:1px solid #f6f6f7}
+.contents_wrap .price_info{padding:10px 0;font-size:13px;font-weight:bold;color:#222;border-bottom:1px solid #f6f6f7}
+.contents_wrap .summary{padding:20px 0}
+
+/* variant */
+.variant_wrap{padding-bottom:20px}
+.variant_wrap h6{color:#888!important;font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.varient__list{overflow:hidden;padding-top:10px}
+.varient__list button{border:1px solid #ccc;font-size:12px;width:40px;height:40px;display:block;float:left;margin-right:5px;color:#888}
+.varient__list button.active{border:2px solid #222;color:#222}
+
+/* add_to_cart */
+#add_to_cart{border:2px solid #222;padding:8px 25px;font-size:14px;text-transform:uppercase;font-weight:bold;background-color:#fff;transition:.2s all linear}
+#add_to_cart:hover{background-color:#222;color:#fff}
+
+
+
+
+@media screen and (max-width:767px){
+  p{font-size:1.2rem;line-height:2rem}
+  .image_wrap{width:100%;}
+  .contents_wrap{width:100%;padding:40px 0 }
+}
+
+@media screen and (max-width:480px){
+  .inner_wrapper{margin: 0 4%;}
+  #mycart{width: calc(100vw - 50%);top:32px;}
+  #mycart .mycart__item img{width:20%}
+}
